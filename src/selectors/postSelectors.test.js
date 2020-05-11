@@ -20,7 +20,7 @@ describe('post selectors', () => {
     ]);
   });
 
-  it('gets a post by idex', () => {
+  it('gets a post by index', () => {
     const state = {
       post: [
       {

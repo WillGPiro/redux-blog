@@ -6,15 +6,15 @@ Create all the redux state management for a blog.
 
 * create `src/actions/postActions.js`
   * posts have an title and body
-  * you can create a post
-  * you can delete a post
+  [x] you can create a post
+      you can delete a post
   * BONUS: you can update a post by passing an id and new body
 
 ## Blog Reducers
 
 * create `src/reducers/postReducer.js`
-  * store an array of posts
-  * handle create a post
+  [x] store an array of posts
+  [x] handle create a post
   * handle delete a post
   * BONUS: handle update a post by index
 

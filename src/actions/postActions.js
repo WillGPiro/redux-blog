@@ -3,3 +3,12 @@ export const addPost = post => ({
   type: ADD_POST,
   payload: post
 });
+
+export const UPDATE_POST = 'UPDATE_POST'
+export const updatePost = (index, post) => ({
+  type: UPDATE_POST,
+  payload: {
+    index,
+    post
+  }
+});
