@@ -1,5 +1,6 @@
 import { getPosts, getPostsByIndex } from "./postSelectors";
-
+import { updatePost } from "../actions/postActions";
+import reducer from "../reducers/postReducer";
 
 describe('post selectors', () => {
   it('gets all (list) of posts', () => {
@@ -38,7 +39,6 @@ describe('post selectors', () => {
     ]};
 
     const post = getPostsByIndex(state, 0)
-
     expect(post).toEqual({
       title: 'My Lost Ocean - A Haiku',
       body: 'Spring, the days grow long, your ebb and flow call my name, alas I am home.'

@@ -1,4 +1,4 @@
-import { addPost } from "../actions/postActions";
+import { addPost, updatePost } from "../actions/postActions";
 import reducer from "./postReducer";
 
 describe('posts reducer', () => {
@@ -18,5 +18,29 @@ describe('posts reducer', () => {
         body: 'Spring, the days grow long, your ebb and flow call my name, alas I am home.'
       }
     ])
+  });
+  
+  it('handles the UPDATE_POST action', () => {
+    const state = [
+      {
+        title: 'My Lost Friends - A Haiku',
+        body: 'Summer, the days are long, your sun and warmth call my name, Im still home.'
+      }
+    ];
+
+    const action = updatePost(0, 
+      {
+        title: 'My Lost Mountain - A Haiku',
+        body: 'Winter, the days grow short, your cold and snow call my name, alas I write code.'
+      }
+    );
+
+    const newState = reducer(state, action);
+    expect(newState).toEqual([
+      {
+        title:'My Lost Mountain - A Haiku',
+        body: 'Winter, the days grow short, your cold and snow call my name, alas I write code.'
+      }
+    ]);
   });
 });
