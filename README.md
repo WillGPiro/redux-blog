@@ -15,7 +15,7 @@ Create all the redux state management for a blog.
 * create `src/reducers/postReducer.js`
   [x] store an array of posts
   [x] handle create a post
-  * handle delete a post
+  [x] handle delete a post
   * BONUS: handle update a post by index
 
 ## STRETCH Blog Combine Reducers
@@ -33,8 +33,8 @@ Create all the redux state management for a blog.
 ## Blog selectors
 
 * create `src/selectors/postSelectors.js`
-  * get all posts
-  * get a post by index
+  [x] get all posts
+  [x] get a post by index
 * STRETCH: create `src/selectors/commentSelectors.js`
   * get all comments by post
 

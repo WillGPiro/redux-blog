@@ -1,4 +1,4 @@
-import { addPost, ADD_POST, updatePost, UPDATE_POST } from "./postActions";
+import { addPost, ADD_POST, updatePost, UPDATE_POST, deletePost, DELETE_POST } from "./postActions";
 
 describe('posts actions', () => {
   it('creates an ADD_POST action', () => {
@@ -31,6 +31,15 @@ describe('posts actions', () => {
           body: 'Spring, the days grow long, your ebb and flow call my name, alas I am home.'
         }
       }
+    });
+  });
+
+  it('creates a DELETE_POST action', () => {
+    const action = deletePost(2);
+
+    expect(action).toEqual({
+      type: DELETE_POST,
+      payload: 2
     });
   });
 });

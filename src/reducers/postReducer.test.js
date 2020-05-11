@@ -1,4 +1,4 @@
-import { addPost, updatePost } from "../actions/postActions";
+import { addPost, updatePost, deletePost } from "../actions/postActions";
 import reducer from "./postReducer";
 
 describe('posts reducer', () => {
@@ -43,4 +43,18 @@ describe('posts reducer', () => {
       }
     ]);
   });
+
+  it('handles a DELETE_POST action', () => {
+    const state = [
+      {
+      title: 'My Lost Mountain - A Haiku',
+      body: 'Winter, the days grow short, your cold and snow call my name, alas I write code.'
+    }
+   ];
+
+   const action = deletePost(0)
+   const newState = reducer(state, action);
+   
+   expect(newState).toEqual([]);
+ })
 });
