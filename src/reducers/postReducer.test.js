@@ -9,6 +9,7 @@ describe('posts reducer', () => {
       body: 'Spring, the days grow long, your ebb and flow call my name, alas I am home.'
     });
 
+    //initial state is empty see postReducer.js
     const newState = reducer(state, action);
 
     expect(newState).toEqual([
